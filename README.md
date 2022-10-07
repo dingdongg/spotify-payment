@@ -21,6 +21,7 @@ This web app automates spotify premium payments - no more manual logging on Goog
 ## **Core Features to Implement**
 ### Plan
 * Create a plan
+* Log in to existing plan
 
 ### Members
 * Add members to plan
