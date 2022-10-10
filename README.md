@@ -30,8 +30,8 @@ Meeting every saturday at 1-2pm.
 2.  Restricting access to certain people
 
 **Milestone 5 (due 7/1/2023)**
-
-1.  Implement Google Pay
+ 
+1.  Implement Google Pay 
 
 **Milestone 6 (due 21/1/2023)**
 
