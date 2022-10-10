@@ -1,3 +1,35 @@
+# scheduele
+
+We wanna try to aim to finish a feature every 2 weeks.
+
+**Milestone 1**
+
+1.  Layout of the website (just front end)
+2.  Infrastructure
+3.  Stub event listeners
+
+
+**Milestone 2**
+
+1.  Sign up form validations
+2.  Creating a plan feature
+3.  Remove and Add members
+
+**Milestone 3**
+
+1.  Implement Database (MongoDB)
+
+**Milestone 4**
+
+1.  Login Feature
+2.  Restricting access to certain people
+
+**Milestone 4**
+
+1.  Implement Google Pay
+
+
+
 # spotify-payment
 
 This template should help get you started developing with Vue 3 in Vite.
@@ -65,6 +97,7 @@ This web app automates spotify premium payments - no more manual logging on Goog
 * Login as a member
 
 ### Payments
+* Implement google pay
 * Request a payment verification (plan member)
 * Approve a payment verification (plan manager)
 * Update list of payments based on verifications
@@ -76,6 +109,7 @@ This web app automates spotify premium payments - no more manual logging on Goog
 ## **Optional Features**
 ### Email
 * send payment reminders via email
+* different look to admin page
 
 ---
 
