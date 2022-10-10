@@ -1,33 +1,48 @@
-# scheduele
+# Scheduele
 
 We wanna try to aim to finish a feature every 2 weeks.
 
-**Milestone 1**
+**Meetings**
+
+Meeting every saturday at 1-2pm.
+
+**Milestone 1 (due 29/10/2022)**
 
 1.  Layout of the website (just front end)
 2.  Infrastructure
 3.  Stub event listeners
 
 
-**Milestone 2**
+**Milestone 2 (due 12/11/2022)**
 
 1.  Sign up form validations
 2.  Creating a plan feature
 3.  Remove and Add members
 
-**Milestone 3**
+**Milestone 3 (due 26/11/2022)**
 
 1.  Implement Database (MongoDB)
+2.  Hooking it up with the back end
 
-**Milestone 4**
+**Milestone 4 (due 10/12/2022)**
 
 1.  Login Feature
 2.  Restricting access to certain people
 
-**Milestone 4**
+**Milestone 5 (due 7/1/2023)**
 
 1.  Implement Google Pay
 
+**Milestone 6 (due 21/1/2023)**
+
+1.  Email admin once a payment is made
+2.  Monthly reminders
+3.  Confirmation for admin
+4.  Confirmation email for members after payment goes through
+
+**Final Milestone (due date: uknown)**
+
+1. Push it as a Mobile App.
 
 
 # spotify-payment
