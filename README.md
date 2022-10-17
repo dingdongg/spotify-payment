@@ -1,4 +1,4 @@
-# Scheduele
+# Schedule
 
 We wanna try to aim to finish a feature every 2 weeks.
 
