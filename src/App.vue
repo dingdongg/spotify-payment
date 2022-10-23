@@ -1,5 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import NavBar from "./components/NavBar.vue"
+import resetcss from "./assets/reset.css"
 </script>
 
 
@@ -7,6 +9,7 @@ import { RouterLink, RouterView } from 'vue-router'
    
 
 <template>
+  <NavBar/>
   <div>fycj vue</div>
 </template>
 
