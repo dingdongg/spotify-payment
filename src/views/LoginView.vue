@@ -4,8 +4,8 @@ export default {
 
   data() {
     return {
-      username: ""
-      password: ""
+      username: "",
+      password: "",
     }
   }
 }
