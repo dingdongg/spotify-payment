@@ -7,6 +7,7 @@ export default {
     return {
       username: "",
       password: "",
+      showPassword: false,
     };
   },
 
@@ -16,6 +17,10 @@ export default {
         username: this.username, 
         password: this.password 
       });
+    },
+
+    togglePassword() {
+      this.showPassword = !this.showPassword;
     }
   },
 }
@@ -31,10 +36,12 @@ export default {
           <div id="username-container" class="input-container">
             <input class="clickable" id="username" type="text" v-model="username" placeholder="username" />
           </div>
-          <div id="password-container" class="input-container">
-            <input class="clickable" type="password" id="password" v-model="password" placeholder="password" />
+          <div id="password-container" class="input-container" style="display: flex;">
+            <input v-if="showPassword" class="clickable" type="text" id="password" v-model="password" placeholder="password" />
+            <input v-else class="clickable" type="password" id="password" v-model="password" placeholder="password" />
+            <button @click="togglePassword" class="clickable toggle-visibility" type="button">{{ showPassword ? "🐱" : "👁" }}</button>
           </div>
-          <button type="submit" class="clickable form-submit-button">submit</button>
+          <button type="submit" class="clickable form-submit-button">log in</button>
         </form>
       </div>
     </div>
@@ -74,16 +81,33 @@ export default {
   width: 50%;
 }
 
-.form-submit-button {
+.input-container {
   width: 100%;
 }
 
-input, button {
+.clickable {
+  width: 100%;
+  box-sizing: border-box;
   font-family: inherit;
+  background-color: #1f2833;
+  border: solid 2px #45a29e;
+  border-radius: 5px;
+  color: #c5c6c7;
+  outline: none;
+  transition: 0.3s;
 }
 
-input {
-  width: 96%;
+input:focus, input:hover, button:hover {
+  border: 2px solid #66fcf1;
+}
+
+button:hover {
+  background-color: #2f3338;
+}
+
+::placeholder { 
+  color: #b1b1b1;
+  opacity: 1; /* for firefox */
 }
 
 .input-container {
@@ -94,4 +118,11 @@ input {
   font-size: 20px;
 }
 
+#password {
+  width: 500%;
+}
+
+.toggle-visibility {
+  border: 2px solid #1f2833;
+}
 </style>
