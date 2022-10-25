@@ -68,7 +68,7 @@ export default {
   border-radius: 5px;
   padding: 20px;
   height: 30vh;
-  width: 50vh;
+  width: 55vh;
 }
 
 .login-form-text {
