@@ -6,7 +6,7 @@
                 <img class="profile-picture" :src="member.profilePicUrl" alt="profile pic for {{ member.name }}">
                 {{ member.name }}
             </li>
-            <button>
+            <button type="button" @click="addNewMember">
                 <img src="../assets/172525_plus_icon.png" alt="add member" class="profile-picture">
             </button>
         </div>
@@ -31,6 +31,10 @@ export default {
 
         checkoutMember(member) {
             console.log(`checking out ${member.name}'s profile`);
+        },
+
+        addNewMember() {
+            console.log("adding new member!");
         }
     },
 }
