@@ -1,0 +1,75 @@
+<template>
+    <div class="container">
+        <h1 class="welcome-message">Welcome, {{ name }}</h1>
+        <div class="members-container">
+            <li v-for="member in members" :key="member.name" class="member">
+                <img class="profile-picture" :src="member.profilePicUrl" alt="profile pic for {{ member.name }}">
+                {{ member.name }}
+            </li>
+            <button>
+                <img src="../assets/172525_plus_icon.png" alt="add member" class="profile-picture">
+            </button>
+        </div>
+    </div>
+</template>
+
+<script>
+
+export default {
+    props: ["name", "members"],
+
+    data() {
+        return {
+            notificationPopupOpen: false,
+        }
+    },
+
+    methods: {
+        toggleNotificationPopup() {
+            this.notificationPopupOpen = !this.notificationPopupOpen;
+        }
+    },
+}
+
+</script>
+
+
+<style scoped>
+    .container {
+        background-color: #0b0C10;
+        color: white;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: roboto, 'Noto Sans Myanmar UI', arial, sans-serif;
+    }
+
+    .welcome-message {
+        position: relative;
+        bottom: 20vh;
+        font-size: 36px;
+    }
+
+    .profile-picture {
+        width: 150px;
+        height: auto;
+        border: solid 2px #1F2833;
+        border-radius: 100%;
+    }
+
+    .members-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .member {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+</style>
