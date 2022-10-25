@@ -1,6 +1,6 @@
 <script>
 import api from "../api/api";
-
+import NavBar from "../components/NavBar.vue";
 export default {
 
   data() {
@@ -28,6 +28,7 @@ export default {
 </script>
 
 <template>
+  <NavBar />
   <div class="container">
     <div class="background-wrapper">
       <p class="login-form-text">SPOTIFY PAYMENT LOGIN</p>

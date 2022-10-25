@@ -9,8 +9,14 @@ import LoginView from './views/LoginView.vue';
    
 
 <template>
+  
+  <nav>
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/member-home">Member Home</RouterLink>
+  </nav>
   <NavBar/>
-  <LoginView></LoginView>
+ 
+  <RouterView />
 </template>
 
 
