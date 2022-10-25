@@ -2,7 +2,7 @@
     <div class="container">
         <h1 class="welcome-message">Welcome, {{ name }}</h1>
         <div class="members-container">
-            <li v-for="member in members" :key="member.name" class="member" @click="checkoutMember(member)">
+            <li v-for="member in members" :key="member.id" class="member" @click="checkoutMember(member)">
                 <img class="profile-picture" :src="member.profilePicUrl" alt="profile pic for {{ member.name }}">
                 {{ member.name }}
             </li>

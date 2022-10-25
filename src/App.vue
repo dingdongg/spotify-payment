@@ -10,6 +10,7 @@ const mockName = "test admin";
 for (let i = 1; i < 5; i++) {
   mockData.push({
     name: `mock person #${i}`,
+    id: i,
   });
 }
 
@@ -30,6 +31,7 @@ mockData[3].profilePicUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/m
     :name="mockName"
     :members="mockData"
   />
+  <!-- <LoginView></LoginView> -->
 </template>
 
 
