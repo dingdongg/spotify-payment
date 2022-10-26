@@ -51,15 +51,17 @@ for (let i = 1; i < 25; i++) {
    
 
 <template>
-  <NavBar/>
-  <AdminPaymentHistoryView
-    :payments="mockPayments"
-  />
-  <!-- <AdminHomeView
-    :name="mockName"
-    :members="mockData"
-  /> -->
-  <!-- <LoginView></LoginView> -->
+  <div>
+    <!-- <NavBar/> -->
+    <AdminPaymentHistoryView
+      :payments="mockPayments"
+    />
+    <!-- <AdminHomeView
+      :name="mockName"
+      :members="mockData"
+    /> -->
+    <!-- <LoginView></LoginView> -->
+  </div>
 </template>
 
 
