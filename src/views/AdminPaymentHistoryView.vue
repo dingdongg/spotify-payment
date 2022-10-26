@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <table>
-            <tr v-for="payment in this.filteredArray" :key="payment.payingMemberId">
+            <tr v-for="payment in filteredArray" :key="payment.payingMemberId">
                 <td>Member ID = {{ payment.payingMemberId }}</td>
                 <td>{{ payment.datePaid }}</td>
                 <td>${{ payment.amountPaid }}</td>
@@ -29,7 +29,10 @@
                     </div>
                 </fieldset>
                 <input type="text" v-model="this.filters.amountPaid" placeholder="amount paid">
-                <div><button type="submit">apply filters</button></div>
+                <div>
+                    <button type="submit">apply filters</button>
+                    <button type="button" @click="resetFilters">reset filters</button>
+                </div>
             </form>
         </div>
     </div>
@@ -60,22 +63,25 @@ export default {
 
     methods: {
         applyFilters() {
-            console.log("FILTERING");
+            let origCopy = this.copyPayments;
 
             if (this.filters.name) {
-                console.log('filter name');
-                this.filteredArray.filter(payment => payment.payingMemberId === this.filters.name);
+                origCopy = origCopy.filter(payment => payment.payingMemberId === this.filters.name);
             }
 
             if (this.filters.status) {
-                console.log('filter status');
-                this.filteredArray.filter(payment => payment.status === this.filters.status);
+                origCopy = origCopy.filter(payment => payment.status === this.filters.status);
             }
 
             if (this.filters.amountPaid) {
-                console.log('filter amount paid');
-                this.filteredArray.filter(payment => toString(payment.amountPaid).includes(this.amountPaid));
+                origCopy = origCopy.filter(payment => toString(payment.amountPaid).includes(this.amountPaid));
             }
+
+            this.filteredArray = origCopy;
+        },
+
+        resetFilters() {
+            this.filteredArray = this.copyPayments;
         }
     }
 }
