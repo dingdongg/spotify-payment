@@ -26,12 +26,20 @@ mockData[3].profilePicUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/m
    
 
 <template>
+  
+  <nav>
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/member-home">Member Home</RouterLink>
+  </nav>
   <NavBar/>
+ 
+  <RouterView />
+
   <AdminHomeView
     :name="mockName"
     :members="mockData"
   />
-  <!-- <LoginView></LoginView> -->
+
 </template>
 
 
