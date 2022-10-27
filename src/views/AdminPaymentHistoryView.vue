@@ -66,7 +66,7 @@ export default {
             let origCopy = this.copyPayments;
 
             if (this.filters.name) {
-                origCopy = origCopy.filter(payment => payment.payingMemberId === this.filters.name);
+                origCopy = origCopy.filter(payment => toString(payment.payingMemberId) === this.filters.name);
             }
 
             if (this.filters.status) {
@@ -82,6 +82,9 @@ export default {
 
         resetFilters() {
             this.filteredArray = this.copyPayments;
+            this.filters.name = "";
+            this.filters.status = "";
+            this.filters.amountPaid = "";
         }
     }
 }
