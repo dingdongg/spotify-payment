@@ -80,6 +80,7 @@
 
     .profile>h2, .history>h2, .payment>h2{
         padding-left: 115px;
+        padding-top: 30px;
         font-size: 20px;
     }
 
