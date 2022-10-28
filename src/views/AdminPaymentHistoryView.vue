@@ -66,7 +66,7 @@ export default {
             let origCopy = this.copyPayments;
 
             if (this.filters.name) {
-                origCopy = origCopy.filter(payment => toString(payment.payingMemberId) === this.filters.name);
+                origCopy = origCopy.filter(payment => payment.payingMemberId.toString().includes(this.filters.name));
             }
 
             if (this.filters.status) {
