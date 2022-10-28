@@ -56,6 +56,10 @@ img{
   height: 60px;
   padding-bottom: 30px;
 }
+
+form{
+  padding: 40px;
+}
 .container, .background-wrapper {
   display: flex;
   flex-direction: column;
@@ -73,7 +77,9 @@ img{
 .background-wrapper {
   background-color: #1F2833;
   border-radius: 5px;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 60vh;
   width: 90vh;
 }
@@ -83,19 +89,13 @@ img{
   font-weight: bold;
 }
 
-.form-container {
-  padding: 20px;
-  width: 50%;
-  padding-left: 80px;
-}
 
-.input-container {
-  width: 100%;
-}
+
+
 
 .clickable {
-  width:  300px;
-  height: 50px;
+  
+ 
   box-sizing: border-box;
   font-family: inherit;
   background-color: #1f2833;
@@ -107,18 +107,20 @@ img{
   
   padding: 10px;
   
+  
 }
 #username{
-  width: 325px;
+  width: 40vh;
+}
+#password{
+  width: 40vh;
 }
 
-input:focus, input:hover, button:hover {
-  border: 2px solid #66fcf1;
+
+ button:hover {
+  cursor: pointer;
 }
 
-button:hover {
-  background-color: #2f3338;
-}
 
 ::placeholder { 
   color: #b1b1b1;
@@ -126,28 +128,26 @@ button:hover {
 }
 
 .input-container {
-  margin: 10px 0 10px 0;
+  margin: 20px 0 20px 50px;
 }
 
 .form-submit-button{
   position: relative;
   top:20px;
-  left: 28vh;
+  left: 35vh;
   width: 100px;
   height: 40px;
 }
 
-#password {
-  width: 500%;
-}
+
 
 .toggle-visibility {
   border: 2px solid #1f2833;
   position: relative;
-  width: 40px;
-  height: 40px;
-  right: 40px;
-  top:5px;
+  width: 30px;
+  height: 30px;
+  right: 39px;
+  top:2px;
 
   
 }
