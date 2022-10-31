@@ -8,33 +8,31 @@
                 <td>{{ payment.status }}</td>
             </tr>
         </table>
-        <div>
-            <form @submit.prevent="applyFilters">
-                <h3>Filters</h3>
-                <br />
-                <input type="text" v-model="this.filters.name" placeholder="member name">
-                <fieldset>
-                    <legend>verification status</legend>
-                    <div>
-                        <input v-model="this.filters.status" type="radio" value="approved" id="approved">
-                        <label for="approved">approved</label>
-                    </div>
-                    <div>
-                        <input v-model="this.filters.status" type="radio" value="pending" id="pending">
-                        <label for="pending">pending</label>
-                    </div>
-                    <div>
-                        <input v-model="this.filters.status" type="radio" value="rejected" id="rejected">
-                        <label for="rejected">rejected</label>
-                    </div>
-                </fieldset>
-                <input type="text" v-model="this.filters.amountPaid" placeholder="amount paid">
+        <form @submit.prevent="applyFilters">
+            <h3>Filters</h3>
+            <br />
+            <input type="text" v-model="this.filters.name" placeholder="member name">
+            <fieldset>
+                <legend>verification status</legend>
                 <div>
-                    <button type="submit">apply filters</button>
-                    <button type="button" @click="resetFilters">reset filters</button>
+                    <input v-model="this.filters.status" type="radio" value="approved" id="approved">
+                    <label for="approved">approved</label>
                 </div>
-            </form>
-        </div>
+                <div>
+                    <input v-model="this.filters.status" type="radio" value="pending" id="pending">
+                    <label for="pending">pending</label>
+                </div>
+                <div>
+                    <input v-model="this.filters.status" type="radio" value="rejected" id="rejected">
+                    <label for="rejected">rejected</label>
+                </div>
+            </fieldset>
+            <input type="text" v-model="this.filters.amountPaid" placeholder="amount paid">
+            <div>
+                <button type="submit">apply filters</button>
+                <button type="button" @click="resetFilters">reset filters</button>
+            </div>
+        </form>
     </div>
 </template>
 
@@ -74,7 +72,7 @@ export default {
             }
 
             if (this.filters.amountPaid) {
-                origCopy = origCopy.filter(payment => toString(payment.amountPaid).includes(this.amountPaid));
+                origCopy = origCopy.filter(payment => payment.amountPaid === this.filters.amountPaid);
             }
 
             this.filteredArray = origCopy;
@@ -94,8 +92,12 @@ export default {
 <style scoped>
     .container {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         height: 100vh;
+        background-color: #0b0C10;
+        color: white;   
     }
+
+
 </style>
