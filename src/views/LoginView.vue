@@ -77,9 +77,7 @@ form{
 .background-wrapper {
   background-color: #1F2833;
   border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+ 
   height: 60vh;
   width: 90vh;
 }
