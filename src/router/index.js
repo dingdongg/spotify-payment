@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LoginView from '../views/LoginView.vue'
+import detailsView from '../views/PersonalProfile.vue'
+import AdminHome from '../views/AdminHomeView.vue'
 
 const mockData = [];
 const mockName = "test admin";
@@ -40,7 +42,17 @@ const router = createRouter({
         name: mockName,
         members: mockData,
       },
-      component: () => import ('../views/AdminHomeView.vue')
+      
+      component: ()=> import ('../views/AdminHomeView.vue'),
+
+      children:[
+        {
+          path: 'user/:id',
+          component: ()=> import ('../views/PersonalProfile.vue'),
+          
+
+        },
+      ],
     }
   ]
 })

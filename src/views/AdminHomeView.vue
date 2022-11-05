@@ -3,8 +3,11 @@
         <h1 class="welcome-message">Welcome, {{ name }}</h1>
         <div class="members-container">
             <li v-for="member in members" :key="member.id" class="member" @click="checkoutMember(member)">
+                
                 <img class="profile-picture" :src="member.profilePicUrl" alt="profile pic for {{ member.name }}">
                 {{ member.name }}
+                
+                
             </li>
             <button type="button" @click="addNewMember">
                 <img src="../assets/172525_plus_icon.png" alt="add member" class="profile-picture">
@@ -14,10 +17,13 @@
 </template>
 
 <script>
+import { RouterLink } from 'vue-router';
+import router from '../router';
+
 
 export default {
     props: ["name", "members"],
-
+    name: "AdminHomeView",
     data() {
         return {
             notificationPopupOpen: false,
@@ -30,6 +36,7 @@ export default {
         },
 
         checkoutMember(member) {
+            router.push(`/admin-home/user/${member.id}`)
             console.log(`checking out ${member.name}'s profile`);
         },
 
