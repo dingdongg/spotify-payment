@@ -39,8 +39,9 @@ for (let i = 1; i < 25; i++) {
   mockPayments.push({
     amountPaid: Math.round(30 + Math.random() * 25),
     datePaid: new Date(),
-    payingMemberId: mockData[i % 3],
+    payingMemberId: mockData[i % 4],
     status: randomStatus(),
+    paymentId: i,
   });
 }
 
