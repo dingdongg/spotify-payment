@@ -177,8 +177,4 @@ export default {
     .verification-status-box {
         width: 100%;
     }
-
-    .selected {
-        background-color:red;
-    }
 </style>
