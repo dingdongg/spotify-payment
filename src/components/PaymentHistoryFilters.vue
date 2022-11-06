@@ -1,34 +1,70 @@
 <template>
     <div class="container">
         <div class="filter-container">
-            <form @submit.prevent="applyFilters" class="filter-form">
+            <form @submit.prevent="submitForm" class="filter-form">
                 <h3>Filters</h3>
                 <br />
-                <input type="text" v-model="this.filters.name" placeholder="member name" class="input">
+                <input type="text" :value="name" placeholder="member name" class="input" @input="updateFilters('name', $event.target.value)">
                 <fieldset class="input verification-status-box">
                     <legend style="text-align: center; margin-bottom: 5px;">verification status</legend>
                     <div class="radio-boxes input">
                         <div>
-                            <input v-model="this.filters.status" type="radio" value="approved" id="approved">
-                            <label for="approved">approved</label>
+                            <input 
+                                class="radio-circle" 
+                                name="status" 
+                                type="radio" 
+                                value="approved" 
+                                id="approved" 
+                                @input="updateFilters('status', 'approved')"
+                            >
+                            <label 
+                                for="approved" 
+                                :class="status === 'approved' ? 'clickable' : ''"
+                            >
+                                approved
+                            </label>
                         </div>
                         <div>
-                            <input v-model="this.filters.status" type="radio" value="pending" id="pending">
-                            <label for="pending">pending</label>
+                            <input 
+                                class="radio-circle" 
+                                name="status" 
+                                type="radio" 
+                                value="pending" 
+                                id="pending" 
+                                @input="updateFilters('status', 'pending')"
+                            >
+                            <label 
+                                for="pending"
+                                :class="status === 'pending' ? 'clickable' : ''"
+                            >
+                                pending
+                            </label>
                         </div>
                         <div>
-                            <input v-model="this.filters.status" type="radio" value="rejected" id="rejected">
-                            <label for="rejected">rejected</label>
+                            <input 
+                                class="radio-circle" 
+                                name="status" 
+                                type="radio" 
+                                value="rejected" 
+                                id="rejected" 
+                                @input="updateFilters('status', 'rejected')"
+                            >
+                            <label 
+                                for="rejected" 
+                                :class="status === 'rejected' ? 'clickable' : ''"
+                            >
+                                rejected
+                            </label>
                         </div>
                     </div>
                 </fieldset>
-                <input type="text" v-model="this.filters.amountPaid" placeholder="amount paid" class="input">
+                <input type="text" :value="amount" placeholder="amount paid" class="input" @input="updateFilters('amount', $event.target.value)">
                 <div class="input buttons">
                     <div class="submit button-container">
                         <button type="submit" class="clickable">apply filters</button>
                     </div>
                     <div class="reset button-container">
-                        <button type="button" class="clickable" @click="resetFilters">reset filters</button>
+                        <button type="button" class="clickable" @click="resetForm">reset filters</button>
                     </div>
                 </div>
             </form>
@@ -39,17 +75,29 @@
 <script>
 
 export default {
-    props: ["applyFilters", "resetFilters"],
 
-    data() {
-        return {
-            filters: {
-                name: "",
-                status: "",
-                amountPaid: "",
-            },
+    props: ["name", "status", "amount"],
+
+    emits: [
+        "applyFilters", 
+        "resetFilters", 
+        "update:filters",
+    ],
+
+    methods: {
+        submitForm() {
+            this.$emit("applyFilters");
+        },
+
+        resetForm() {
+            this.$emit("resetFilters");
+        },
+
+        updateFilters(updatedField, value) {
+            const formatted = updatedField.toLowerCase();
+            this.$emit(`update:filters`, formatted, value);
         }
-    },
+    }
 }
 
 </script>
@@ -92,6 +140,10 @@ export default {
         width: 100%;
     }
 
+    .radio-circle {
+        display: none;
+    }
+
     .buttons {
         position: relative;
         top: 1.2em;
@@ -124,5 +176,9 @@ export default {
 
     .verification-status-box {
         width: 100%;
+    }
+
+    .selected {
+        background-color:red;
     }
 </style>
