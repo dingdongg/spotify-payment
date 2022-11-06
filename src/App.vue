@@ -52,17 +52,21 @@ for (let i = 1; i < 25; i++) {
    
 
 <template>
-  <div>
-    <!-- <NavBar/> -->
-    <AdminPaymentHistoryView
-      :payments="mockPayments"
-    />
-    <!-- <AdminHomeView
-      :name="mockName"
-      :members="mockData"
-    /> -->
-    <!-- <LoginView></LoginView> -->
-  </div>
+  
+  <nav>
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/member-home">Member Home</RouterLink>
+    <RouterLink to="/admin-home">Admin Home</RouterLink>
+  </nav>
+  <NavBar/>
+ 
+  <RouterView />
+
+  <!-- <AdminHomeView
+    :name="mockName"
+    :members="mockData"
+  /> -->
+
 </template>
 
 

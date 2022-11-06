@@ -1,6 +1,9 @@
-# Scheduele
+# Schedule
 
 We wanna try to aim to finish a feature every 2 weeks.
+
+# Figma
+https://www.figma.com/file/aJdnX6kEbNEPUZMXZBr1UH/Spotify-tracker-app?node-id=0%3A1 
 
 **Meetings**
 
