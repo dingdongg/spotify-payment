@@ -1,11 +1,15 @@
 <template>
     <div class="container">
         <PaymentHistoryTable
-            :payments="payments"
+            :payments="filteredArray"
         />
         <PaymentHistoryFilters
-            @submit.prevent="applyFilters"
-            @click="resetFilters"
+            v-model:name="this.filters.name"
+            v-model:status="this.filters.status"
+            v-model:amount="this.filters.amount"
+            @update:filters="updateFilters"
+            @applyFilters="applyFilters"
+            @resetFilters="resetFilters"
         />
     </div>
 </template>
@@ -27,9 +31,9 @@ export default {
             filters: {
                 name: "",
                 status: "",
-                amountPaid: "",
+                amount: "",
             },
-            filteredArray: this.payments.map(p => {return {...p}}),
+            filteredArray: this.payments,
         }
     },
 
@@ -44,15 +48,15 @@ export default {
             let origCopy = this.copyPayments;
 
             if (this.filters.name) {
-                origCopy = origCopy.filter(payment => payment.payingMemberId.toString().includes(this.filters.name));
+                origCopy = origCopy.filter(payment => payment.payingMemberId.name.toString().includes(this.filters.name));
             }
 
             if (this.filters.status) {
                 origCopy = origCopy.filter(payment => payment.status === this.filters.status);
             }
 
-            if (this.filters.amountPaid) {
-                origCopy = origCopy.filter(payment => payment.amountPaid === this.filters.amountPaid);
+            if (this.filters.amount) {
+                origCopy = origCopy.filter(payment => payment.amountPaid === parseInt(this.filters.amount));
             }
 
             this.filteredArray = origCopy;
@@ -62,7 +66,11 @@ export default {
             this.filteredArray = this.copyPayments;
             this.filters.name = "";
             this.filters.status = "";
-            this.filters.amountPaid = "";
+            this.filters.amount = "";
+        },
+
+        updateFilters(field, newValue) {
+            this.filters[field] = newValue;
         }
     },
 }
