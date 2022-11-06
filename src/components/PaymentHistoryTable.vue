@@ -11,7 +11,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="payment in filteredArray" :key="payment.payingMemberId" class="row-height">
+                    <tr v-for="payment in payments" :key="payment.paymentId" class="row-height">
                         <td class="column-width">
                             <img :src="payment.payingMemberId.profilePicUrl" alt="profile picture" class="profile-picture">
                         </td>
@@ -30,17 +30,6 @@
 export default {
 
     props: ["payments"],
-
-    data() {
-        return {
-            filters: {
-                name: "",
-                status: "",
-                amountPaid: "",
-            },
-            filteredArray: this.payments.map(p => {return {...p}}),
-        }
-    },
 }
 
 </script>
