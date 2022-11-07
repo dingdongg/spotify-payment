@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LoginView from '../views/LoginView.vue'
 import detailsView from '../views/PersonalProfile.vue'
-import AdminHome from '../views/AdminHomeView.vue'
+import AdminHome from '../views/ProfileSelection.vue'
 
 const mockData = [];
 const mockName = "test admin";
@@ -10,6 +10,8 @@ for (let i = 1; i < 5; i++) {
   mockData.push({
     name: `mock person #${i}`,
     id: i,
+    owed: Math.ceil(Math.random()*30),
+    lastpay: Math.ceil(Math.random()*30)
   });
 }
 
@@ -38,20 +40,29 @@ const router = createRouter({
     {
       path:'/admin-home',
       name:'admin-home',
-      props: {
-        name: mockName,
-        members: mockData,
-      },
       
-      // component: ()=> import ('../views/AdminHomeView.vue'),
+      
+       component: ()=> import ('../views/AdminHomeView.vue'),
 
       children:[
+        
+        {
+          path: '',
+          props: {
+            name: mockName,
+            members: mockData,
+          },
+          component: ()=> import ('../views/ProfileSelection.vue'),
+        },
         {
           path: 'user/:id',
+          props: {
+            members: mockData,
+          },
           component: ()=> import ('../views/PersonalProfile.vue'),
           
 
-        },
+        }
       ],
     }
   ]

@@ -1,6 +1,29 @@
 <script>
+import { isMemberExpression } from '@vue/compiler-core';
 
 
+
+// i can take the router.id then i can use that for index number in mockdata
+export default{
+    props: ["members"],
+    
+    data(){
+       
+        return{
+            name: this.members[this.$route.params.id-1].name,
+            img: this.members[this.$route.params.id-1].profilePicUrl,
+            owed: this.members[this.$route.params.id-1].owed,
+            lastPay: this.members[this.$route.params.id-1].lastpay
+            
+        }
+    },
+    methods:{
+        log(){
+            console.log(this.members[this.$route.params.id-1].owed)
+        }
+    }
+
+}
 
 </script>
 
@@ -10,15 +33,16 @@
 
 <div class="container">
     <div class="userprofile">
-        <img src="../components/icons/penguin-boba.jpg">
+        <img :src="img">
         <h4>PROFILE</h4>
-        <h1>mahkel</h1>
+        <h1>{{name}} </h1>
     </div>
     <div class="stats">
-        <h1>last payment: $30</h1>
-        <h1>amount owed: $30</h1>
+        <h1>last payment: ${{lastPay}}</h1>
+        <h1>amount owed: ${{owed}}</h1>
     </div>
     <div class="count-down">
+        
         <h1>next payment due in xx days</h1>
     </div>
     
