@@ -1,12 +1,12 @@
 <script>
-import { isMemberExpression } from '@vue/compiler-core';
 
+import CountDown from "../components/Countdown.vue"
 
 
 // i can take the router.id then i can use that for index number in mockdata
 export default{
     props: ["members"],
-    
+    components: { CountDown },
     data(){
        
         return{
@@ -43,7 +43,8 @@ export default{
     </div>
     <div class="count-down">
         
-        <h1>next payment due in xx days</h1>
+        <h1>Next payment due in</h1>
+        <CountDown/>
     </div>
     
     
@@ -60,6 +61,7 @@ export default{
     height: 100vh;
     background-color: #1F2833;
     color: white;
+    
     font-family: roboto, 'Noto Sans Myanmar UI', arial, sans-serif;
 }
 
@@ -79,6 +81,7 @@ export default{
     left: 460px;
     top:210px;
     font-size: 65px;
+    font-weight: bold;
 }
 .userprofile>h4{
     position: absolute;
@@ -106,5 +109,9 @@ export default{
 .count-down{
     grid-column: 2/3;
     grid-row: 4/5;
+}
+.count-down>h1{
+    font-size: 35px;
+    font-weight: bold;
 }
 </style>

@@ -15,7 +15,7 @@ import AdminHomeView from './views/ProfileSelection.vue';
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/member-home">Member Home</RouterLink>
     <RouterLink to="/admin-home">Admin Home</RouterLink>
-    <RouterLink to="/admin-home/user/1">test</RouterLink>
+    
   </nav>
   <NavBar/>
  
@@ -27,6 +27,8 @@ import AdminHomeView from './views/ProfileSelection.vue';
   /> -->
 
 </template>
+
+
 
 
 
