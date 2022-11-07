@@ -19,7 +19,7 @@ Meeting every saturday at 1-2pm.
 **Milestone 2 (due 12/11/2022)**
 
 1.  Filters for history page
-2.  Routing
+2.  Routing for member home and admin home
 3.  Remove and Add members
 4.  Stub countdown feature
 
