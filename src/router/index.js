@@ -43,7 +43,7 @@ const router = createRouter({
         members: mockData,
       },
       
-      component: ()=> import ('../views/AdminHomeView.vue'),
+      // component: ()=> import ('../views/AdminHomeView.vue'),
 
       children:[
         {
