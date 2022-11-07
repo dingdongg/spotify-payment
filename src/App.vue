@@ -2,7 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import NavBar from "./components/NavBar.vue"
 import LoginView from './views/LoginView.vue';
-import AdminHomeView from './views/AdminHomeView.vue';
+import AdminHomeView from './views/ProfileSelection.vue';
 </script>
 
 
@@ -15,6 +15,7 @@ import AdminHomeView from './views/AdminHomeView.vue';
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/member-home">Member Home</RouterLink>
     <RouterLink to="/admin-home">Admin Home</RouterLink>
+    
   </nav>
   <NavBar/>
  
@@ -26,6 +27,8 @@ import AdminHomeView from './views/AdminHomeView.vue';
   /> -->
 
 </template>
+
+
 
 
 
