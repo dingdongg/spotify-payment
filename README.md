@@ -1,6 +1,6 @@
 # Schedule
 
-We wanna try to aim to finish a feature every 2 weeks.
+We wanna try to aim to finish a feature every 2 weeks. 
 
 # Figma
 https://www.figma.com/file/aJdnX6kEbNEPUZMXZBr1UH/Spotify-tracker-app?node-id=0%3A1 
@@ -18,9 +18,10 @@ Meeting every saturday at 1-2pm.
 
 **Milestone 2 (due 12/11/2022)**
 
-1.  Sign up form validations
-2.  Creating a plan feature
+1.  Filters for history page
+2.  Routing
 3.  Remove and Add members
+4.  Stub countdown feature
 
 **Milestone 3 (due 26/11/2022)**
 
