@@ -22,6 +22,7 @@ Meeting every saturday at 1-2pm.
 2.  Routing for member home and admin home
 3.  Remove and Add members
 4.  Stub countdown feature
+5.  Dropdown for header
 
 **Milestone 3 (due 26/11/2022)**
 
