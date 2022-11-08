@@ -5,6 +5,7 @@
                 <thead class="table-header">
                     <tr class="header-height">
                         <th class="column-width">Member</th>
+                        <th class="column-width">Name</th>
                         <th class="column-width">Date Paid</th>
                         <th class="column-width">Amount</th>
                         <th class="column-width">Status</th>
@@ -15,6 +16,7 @@
                         <td class="column-width">
                             <img :src="payment.payingMemberId.profilePicUrl" alt="profile picture" class="profile-picture">
                         </td>
+                        <td class="column-width">{{ payment.paymentId }}</td>
                         <td class="column-width">{{ payment.datePaid.toDateString() }}</td>
                         <td class="column-width">${{ payment.amountPaid }}</td>
                         <td class="column-width">{{ payment.status }}</td>
