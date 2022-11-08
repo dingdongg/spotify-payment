@@ -5,27 +5,15 @@ import LoginView from './views/LoginView.vue';
 import AdminHomeView from './views/ProfileSelection.vue';
 </script>
 
-
-
-   
-
 <template>
-  
   <nav>
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/member-home">Member Home</RouterLink>
     <RouterLink to="/admin-home">Admin Home</RouterLink>
-    
+    <RouterLink to="/admin-payment-history">Admin Payment History</RouterLink>
   </nav>
   <NavBar/>
- 
   <RouterView />
-
-  <!-- <AdminHomeView
-    :name="mockName"
-    :members="mockData"
-  /> -->
-
 </template>
 
 

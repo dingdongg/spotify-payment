@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LoginView from '../views/LoginView.vue'
+import AdminPaymentHistoryView from '../views/AdminPaymentHistoryView.vue';
 import detailsView from '../views/PersonalProfile.vue'
 import AdminHome from '../views/ProfileSelection.vue'
 
@@ -20,6 +21,30 @@ mockData[1].profilePicUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/m
 mockData[2].profilePicUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/136.png";
 mockData[3].profilePicUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/754.png";
 
+const mockPayments = [];
+
+const randomStatus = () => {
+  const decider = Math.round(Math.random() * 2);
+
+  switch (decider) {
+    case 0:
+      return "approved";
+    case 1:
+      return "pending";
+    default:
+      return "rejected";
+  }
+}
+
+for (let i = 1; i < 25; i++) {
+  mockPayments.push({
+    amountPaid: Math.round(30 + Math.random() * 25),
+    datePaid: new Date(),
+    payingMemberId: mockData[i % 4],
+    status: randomStatus(),
+    paymentId: i,
+  });
+}
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -40,10 +65,11 @@ const router = createRouter({
     {
       path:'/admin-home',
       name:'admin-home',
-      
-      
-       component: ()=> import ('../views/AdminHomeView.vue'),
-
+      props: {
+        name: mockName,
+        members: mockData,
+      },
+      component: () => import ('../views/AdminHomeView.vue'),
       children:[
         
         {
@@ -64,6 +90,13 @@ const router = createRouter({
 
         }
       ],
+    },
+    {
+      path: '/admin-payment-history',
+      component: AdminPaymentHistoryView,
+      props: {
+        payments: mockPayments,
+      },
     }
   ]
 })
