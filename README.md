@@ -11,7 +11,7 @@ Meeting every saturday at 1-2pm.
 
 **Milestone 1 (due 29/10/2022)**
 
-1.  Layout of the website (just front end)
+1.  Layout of the website (css)
 2.  Infrastructure
 3.  Stub event listeners
 
