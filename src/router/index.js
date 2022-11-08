@@ -65,10 +65,7 @@ const router = createRouter({
     {
       path:'/admin-home',
       name:'admin-home',
-      props: {
-        name: mockName,
-        members: mockData,
-      },
+      
       component: () => import ('../views/AdminHomeView.vue'),
       children:[
         
