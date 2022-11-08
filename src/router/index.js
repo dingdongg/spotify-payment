@@ -94,6 +94,20 @@ const router = createRouter({
       props: {
         payments: mockPayments,
       },
+    },
+    {
+      path: '/my-profile',
+      component: ()=> import ('../views/MemberPersonalProfile.vue')
+
+    },
+    {
+      path: '/my-history',
+      component: ()=> import ('../views/MemberHistory.vue')
+
+    },
+    {
+      path:'/my-payments',
+      component: ()=> import ('../views/Payment.vue')
     }
   ]
 })
