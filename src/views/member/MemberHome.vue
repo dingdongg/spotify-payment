@@ -6,21 +6,21 @@
 <template>
     <div class="container">
         <div class="welcome-user">
-            <img src="../components/icons/penguin-boba.jpg">
+            <img src="../../components/icons/penguin-boba.jpg">
              <h2>Hi, mahkel</h2>
         </div>
 
         <div class="profile">
-            <img src="../components/icons/3018530_buyer_customer_figure_person_portrait_icon.png"/>
+            <img src="../../components/icons/3018530_buyer_customer_figure_person_portrait_icon.png"/>
             <h2>Profile</h2> 
         </div>
         <div class="history">
-            <img src="../components/icons/3018530_buyer_customer_figure_person_portrait_icon.png"/>
+            <img src="../../components/icons/3018530_buyer_customer_figure_person_portrait_icon.png"/>
             <h2>History</h2> 
             
         </div>
         <div class="payment">
-            <img src="../components/icons/3018530_buyer_customer_figure_person_portrait_icon.png"/>
+            <img src="../../components/icons/3018530_buyer_customer_figure_person_portrait_icon.png"/>
             <h2>Payment</h2> 
            
         </div>

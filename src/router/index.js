@@ -1,8 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LoginView from '../views/LoginView.vue'
-import AdminPaymentHistoryView from '../views/AdminPaymentHistoryView.vue';
-import detailsView from '../views/PersonalProfile.vue'
-import AdminHome from '../views/ProfileSelection.vue'
+import AdminPaymentHistoryView from '../views/admin/AdminPaymentHistoryView.vue';
 
 const mockData = [];
 const mockName = "test admin";
@@ -60,13 +58,13 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/MemberHome.vue')
+      component: () => import('../views/member/MemberHome.vue')
     },
     {
       path:'/admin-home',
       name:'admin-home',
       
-      component: () => import ('../views/AdminHomeView.vue'),
+      component: () => import ('../views/admin/AdminHomeView.vue'),
       children:[
         
         {
@@ -75,14 +73,14 @@ const router = createRouter({
             name: mockName,
             members: mockData,
           },
-          component: ()=> import ('../views/ProfileSelection.vue'),
+          component: ()=> import ('../views/admin/ProfileSelection.vue'),
         },
         {
           path: 'user/:id',
           props: {
             members: mockData,
           },
-          component: ()=> import ('../views/PersonalProfile.vue'),
+          component: ()=> import ('../views/admin/PersonalProfile.vue'),
           
 
         }
