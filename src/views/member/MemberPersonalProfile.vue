@@ -4,7 +4,7 @@
 
     <div class="container">
         <div class="userprofile">
-            <img src="../components/icons/penguin-boba.jpg">
+            <img src="../../components/icons/penguin-boba.jpg">
             <h4>PROFILE</h4>
             <h1>mahkel</h1>
         </div>
