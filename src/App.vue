@@ -1,8 +1,11 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
+<script>
 import NavBar from "./components/NavBar.vue"
-import LoginView from './views/LoginView.vue';
-import AdminHomeView from './views/ProfileSelection.vue';
+
+export default {
+  components: {
+    NavBar,
+  }
+}
 </script>
 
 <template>

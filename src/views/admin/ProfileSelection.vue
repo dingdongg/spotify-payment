@@ -10,7 +10,7 @@
                 
             </li>
             <button type="button" @click="addNewMember">
-                <img src="../assets/172525_plus_icon.png" alt="add member" class="profile-picture">
+                <img src="../../assets/172525_plus_icon.png" alt="add member" class="profile-picture">
             </button>
           
         </div>
@@ -19,7 +19,7 @@
 
 <script>
 import { RouterLink } from 'vue-router';
-import router from '../router';
+import router from '../../router';
 
 
 export default {

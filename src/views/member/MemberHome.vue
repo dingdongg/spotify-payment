@@ -29,7 +29,7 @@ export default{
 <template>
     <div class="container">
         <div class="welcome-user">
-            <img src="../components/icons/penguin-boba.jpg">
+            <img src="../../components/icons/penguin-boba.jpg">
              <h2>Hi, mahkel</h2>
         </div>
 

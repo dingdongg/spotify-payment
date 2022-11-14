@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import PaymentHistoryTable from '../components/PaymentHistoryTable.vue';
-import PaymentHistoryFilters from '../components/PaymentHistoryFilters.vue';
+import PaymentHistoryTable from '../../components/PaymentHistoryTable.vue';
+import PaymentHistoryFilters from '../../components/PaymentHistoryFilters.vue';
 
 export default {
     props: ["payments"],

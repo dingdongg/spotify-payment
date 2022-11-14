@@ -1,6 +1,6 @@
 <script>
 
-import CountDown from "../components/Countdown.vue"
+import CountDown from "../../components/Countdown.vue"
 
 
 // i can take the router.id then i can use that for index number in mockdata
