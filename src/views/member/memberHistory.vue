@@ -15,7 +15,7 @@
                    
                     <tr class="row-height">
                         <td class="column-width"  >
-                            <img src="../components/icons/penguin-boba.jpg" alt="profile picture" class="profile-picture">
+                            <img src="../../components/icons/penguin-boba.jpg" alt="profile picture" class="profile-picture">
                         </td>
                         <td class="column-width">mahkel</td>
                         <td class="column-width">oct 22</td>
