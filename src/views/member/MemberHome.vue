@@ -1,6 +1,29 @@
 <script>
+import { defineAsyncComponent } from 'vue';
+import { routerKey } from 'vue-router';
 
-</script>
+import router from "../router"
+export default{
+    methods:{
+        checkProfile (){
+            console.log("test")
+            router.push("/my-profile")
+        },
+        checkHistory(){
+            console.log("history")
+            router.push("/my-history")
+        },
+        checkPayment(){
+            console.log("asdfas")
+            router.push("/my-payments")
+        }
+
+
+}
+
+}
+
+</script> 
 
 
 <template>
@@ -10,17 +33,17 @@
              <h2>Hi, mahkel</h2>
         </div>
 
-        <div class="profile">
-            <img src="../../components/icons/3018530_buyer_customer_figure_person_portrait_icon.png"/>
+        <div class="profile"  @click="checkProfile()">
+            <img src="../components/icons/3018530_buyer_customer_figure_person_portrait_icon.png"/>
             <h2>Profile</h2> 
         </div>
-        <div class="history">
-            <img src="../../components/icons/3018530_buyer_customer_figure_person_portrait_icon.png"/>
+        <div class="history" @click=" checkHistory()">
+            <img src="../components/icons/3018530_buyer_customer_figure_person_portrait_icon.png"/>
             <h2>History</h2> 
             
         </div>
-        <div class="payment">
-            <img src="../../components/icons/3018530_buyer_customer_figure_person_portrait_icon.png"/>
+        <div class="payment" @click="checkPayment()">
+            <img src="../components/icons/3018530_buyer_customer_figure_person_portrait_icon.png"/>
             <h2>Payment</h2> 
            
         </div>
@@ -67,15 +90,21 @@
     }
     .profile{
         grid-column:   2/3 ;
+        height: 300px;
         
     }
     
     .history{
         grid-column:   3/4 ;
+        height: 300px;
     }
    
     .payment{
         grid-column:   4/5 ;
+        height: 300px;
+    }
+    .profile:hover, .history:hover, .payment.hover{
+        cursor: pointer;
     }
 
     .profile>h2, .history>h2, .payment>h2{
