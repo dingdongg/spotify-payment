@@ -1,8 +1,7 @@
 <script>
-import { defineAsyncComponent } from 'vue';
-import { routerKey } from 'vue-router';
 
-import router from "../router"
+
+import router from "../../router"
 export default{
     methods:{
         checkProfile (){
@@ -34,16 +33,16 @@ export default{
         </div>
 
         <div class="profile"  @click="checkProfile()">
-            <img src="../components/icons/3018530_buyer_customer_figure_person_portrait_icon.png"/>
+            <img src="../../components/icons/3018530_buyer_customer_figure_person_portrait_icon.png"/>
             <h2>Profile</h2> 
         </div>
         <div class="history" @click=" checkHistory()">
-            <img src="../components/icons/3018530_buyer_customer_figure_person_portrait_icon.png"/>
+            <img src="../../components/icons/3018530_buyer_customer_figure_person_portrait_icon.png"/>
             <h2>History</h2> 
             
         </div>
         <div class="payment" @click="checkPayment()">
-            <img src="../components/icons/3018530_buyer_customer_figure_person_portrait_icon.png"/>
+            <img src="../../components/icons/3018530_buyer_customer_figure_person_portrait_icon.png"/>
             <h2>Payment</h2> 
            
         </div>

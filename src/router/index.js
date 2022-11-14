@@ -100,7 +100,7 @@ const router = createRouter({
     },
     {
       path: '/my-history',
-      component: ()=> import ('../views/MemberHistory.vue')
+      component: ()=> import ('../views/member/MemberHistory.vue')
 
     },
     {
