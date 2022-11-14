@@ -1,4 +1,5 @@
 <script>
+
 import api from "../api/api";
 import NavBar from "../components/NavBar.vue";
 export default {
@@ -28,6 +29,7 @@ export default {
 </script>
 
 <template>
+
   <NavBar />
   <div class="container">
     <div class="background-wrapper">
@@ -48,9 +50,11 @@ export default {
       </div>
     </div>
   </div>
+
 </template>
 
 <style scoped>
+
 img{
   width: 60px;
   height: 60px;
@@ -81,16 +85,10 @@ form{
   height: 60vh;
   width: 90vh;
 }
-
 .login-form-text {
   font-size: 32px;
   font-weight: bold;
 }
-
-
-
-
-
 .clickable {
   
  

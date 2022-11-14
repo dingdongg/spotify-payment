@@ -1,12 +1,11 @@
 <template>
+
     <div class="container">
         <button>
             Pay now
         </button>
-    
     </div>
    
-
 </template>
 
 <style scoped>
