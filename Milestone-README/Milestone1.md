@@ -5,6 +5,5 @@
 3.  Stub event listeners
 
 
-This Milestone is meant to be the planning a page's design, creation of UML diagrams and implement them through css. We also want to make stub event listeners to help us in the future milestones. 
-
- 
+This Milestone is meant to be the planning a page's design, creation of UML diagrams and implement them through css. 
+We also want to make stub event listeners to help us in the future milestones. 
