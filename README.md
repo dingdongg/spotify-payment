@@ -5,8 +5,11 @@ We wanna try to aim to finish a feature every 2 weeks.
 # Figma
 **frontend**
 https://www.figma.com/file/aJdnX6kEbNEPUZMXZBr1UH/Spotify-tracker-app?node-id=0%3A1 
+
 **backend**
+
 https://www.figma.com/file/hpqsg031qhNdgGlSqk5PDD/Backend-Figma?node-id=0%3A1&t=y8MQcNSd9CTycxXq-0 
+
 **Meetings**
 
 Meeting every saturday at 1-2pm.
