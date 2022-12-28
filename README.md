@@ -32,8 +32,10 @@ Meeting every saturday at 1-2pm.
 
 **Milestone 3 (due 26/11/2022)**
 
-1.  Implement Database (MongoDB)
-2.  Hooking it up with the back end
+1.  Connect Database (MongoDB)
+2.  Schema and Model for Users and Payments
+3.  Users and Payment Controllers 
+
 
 **Milestone 4 (due 10/12/2022)**
 
