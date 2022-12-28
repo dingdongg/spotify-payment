@@ -20,6 +20,7 @@ Meeting every saturday at 1-2pm.
 1.  Layout of the website (css)
 2.  Infrastructure
 3.  Stub event listeners
+4.  Figma planning
 
 
 **Milestone 2 (due 12/11/2022)**
