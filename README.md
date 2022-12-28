@@ -35,6 +35,7 @@ Meeting every saturday at 1-2pm.
 1.  Connect Database (MongoDB)
 2.  Schema and Model for Users and Payments
 3.  Users and Payment Controllers 
+4.  Implement testing frame work (Mocha, Chai)
 
 
 **Milestone 4 (due 10/12/2022)**
