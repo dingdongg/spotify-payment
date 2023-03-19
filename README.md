@@ -1,5 +1,4 @@
-<img width="887" alt="image" src="https://user-images.githubusercontent.com/82309121/226161655-c7e421c8-9e82-4166-ad92-a60bb53fabc3.png"
-     style="width: 100%; height: auto;">
+<img width="966" alt="image" src="https://user-images.githubusercontent.com/82309121/226161976-482eb363-98de-469a-a065-140ae27bcfbe.png" style="width: 100%; height: auto;">
 
 # Schedule
 
