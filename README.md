@@ -1,3 +1,6 @@
+<img width="887" alt="image" src="https://user-images.githubusercontent.com/82309121/226161655-c7e421c8-9e82-4166-ad92-a60bb53fabc3.png"
+     style="width: 100%; height: auto;">
+
 # Schedule
 
 We wanna try to aim to finish a feature every 2 weeks. 
