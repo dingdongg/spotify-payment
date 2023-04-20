@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import api from "../../api/api";
+import api from "../../api/api.mjs";
 import NavBar from "../../components/NavBar.vue";
 
 export default {
