@@ -28,7 +28,7 @@ export default {
     components: {
         PaymentHistoryTable,
         PaymentHistoryFilters,
-        NavBar,
+        NavBar
     },
 
     data() {

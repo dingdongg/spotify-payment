@@ -8,7 +8,7 @@ import MemberHistory from '../views/member/MemberHistory.vue';
 import MemberPayment from '../views/member/MemberPayment.vue';
 import PersonalProfile from '../views/admin/PersonalProfile.vue';
 
-const isAdmin= true;
+const isAdmin= false;
 const mockData = [];
 const mockName = "test admin";
 
