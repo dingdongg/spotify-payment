@@ -1,24 +1,33 @@
-<script>
+<template>
+  <RouterView/>
+</template>
 
+<script>
 import NavBar from "./components/NavBar.vue"
+import { computed } from 'vue' 
 
 export default {
   components: {
-    NavBar,
-  }
+    NavBar, 
+    
+  },
+  data(){
+    return {
+      isLoggedIn: false
+    }
+  },
+  provide(){
+    return{
+      isLoggedIn: computed(() => this.isLoggedIn)
+    }
+  },
+  // created(){
+  //   //fetch here
+  //   this.$root.$on('update-isLoggedIn', (value) => {
+  //   this.isLoggedIn = value
+  // })
+  // }
+    
+  
 }
-
 </script>
-
-<template>
-
-  <nav>
-    <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/member-home">Member Home</RouterLink>
-    <RouterLink to="/admin-home">Admin Home</RouterLink>
-    <RouterLink to="/admin-payment-history">Admin Payment History</RouterLink>
-  </nav>
-  <NavBar/>
-  <RouterView />
-
-</template>

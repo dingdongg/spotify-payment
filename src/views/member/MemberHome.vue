@@ -1,31 +1,9 @@
-<script>
 
-
-import router from "../../router"
-export default{
-    methods:{
-        checkProfile (){
-            console.log("test")
-            router.push("/my-profile")
-        },
-        checkHistory(){
-            console.log("history")
-            router.push("/my-history")
-        },
-        checkPayment(){
-            console.log("asdfas")
-            router.push("/my-payments")
-        }
-
-
-}
-
-}
-
-</script> 
 
 
 <template>
+    <div>
+        <NavBar/>
     <div class="container">
         <div class="welcome-user">
             <img src="../../components/icons/penguin-boba.jpg">
@@ -48,8 +26,37 @@ export default{
         </div>
 
     </div>
+</div>
 </template>
+<script>
 
+
+import router from "../../router"
+import NavBar from "../../components/NavBar.vue"
+export default{
+    methods:{
+        checkProfile (){
+            console.log("test")
+            router.push("/my-profile")
+        },
+        checkHistory(){
+            console.log("history")
+            router.push("/my-history")
+        },
+        checkPayment(){
+            console.log("asdfas")
+            router.push("/my-payments")
+        }
+
+    
+}, components: {
+    NavBar
+    
+  }
+
+}
+
+</script> 
 <style scoped>
     .container{
         background-color: #353b45;

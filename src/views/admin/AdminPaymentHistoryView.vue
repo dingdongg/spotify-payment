@@ -1,22 +1,26 @@
 <template>
-    <div class="container">
-        <PaymentHistoryTable
-            :payments="filteredArray"
-        />
-        <PaymentHistoryFilters
-            v-model:name="this.filters.name"
-            v-model:status="this.filters.status"
-            v-model:amount="this.filters.amount"
-            @update:filters="updateFilters"
-            @applyFilters="applyFilters"
-            @resetFilters="resetFilters"
-        />
+    <div>
+        <NavBar/>
+        <div class="container">
+            <PaymentHistoryTable
+                :payments="filteredArray"
+            />
+            <PaymentHistoryFilters
+                v-model:name="this.filters.name"
+                v-model:status="this.filters.status"
+                v-model:amount="this.filters.amount"
+                @update:filters="updateFilters"
+                @applyFilters="applyFilters"
+                @resetFilters="resetFilters"
+            />
+        </div>
     </div>
 </template>
 
 <script>
 import PaymentHistoryTable from '../../components/PaymentHistoryTable.vue';
 import PaymentHistoryFilters from '../../components/PaymentHistoryFilters.vue';
+import NavBar from '../../components/NavBar.vue';
 
 export default {
     props: ["payments"],
@@ -24,6 +28,7 @@ export default {
     components: {
         PaymentHistoryTable,
         PaymentHistoryFilters,
+        NavBar,
     },
 
     data() {

@@ -1,26 +1,31 @@
 
 <template>
 <div class="navbar">
-
-
-
-<div class="main-logo">
-<img src="./icons/spotify-logo.png" >
-</div>
- 
-
- <div class="bell-logo">
-  <img src="./icons/bell-icon.png" >
- </div>
-  <div class="profile">
-    
-  <img src="./icons/penguin-boba.jpg" >
- </div>
-
-   
+   <div class="main-logo">
+      <RouterLink to="/home">
+      <img src="../components/icons/spotify-logo.png" >
+      </RouterLink>
+   </div>
+   <div class="bell-logo">
+      <img src="./icons/bell-icon.png" >
+   </div>
+   <div class="profile">
+      <img src="./icons/penguin-boba.jpg" >
+   </div>  
 </div>
 
 </template>
+
+<script>
+export default {
+   computed:{
+         targetRoute(){
+            
+         }
+   }
+}
+
+</script>
 
 <style scoped>
 
@@ -36,7 +41,7 @@
     grid-template-columns: 1fr 5fr 0.35fr 0.5fr;
 }
  
- .main-logo > img{
+ .main-logo img{
     max-width:40px;
     max-width:40px;
  }

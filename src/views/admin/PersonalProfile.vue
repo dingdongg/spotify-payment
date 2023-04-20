@@ -1,12 +1,37 @@
+<template>
+
+<div>
+    <NavBar/>
+<div class="container">
+    <div class="userprofile">
+        <img :src="img">
+        <h4>PROFILE</h4>
+        <h1>{{name}} </h1>
+    </div>
+    <div class="stats">
+        <h1>last payment: ${{lastPay}}</h1>
+        <h1>amount owed: ${{owed}}</h1>
+    </div>
+    <div class="count-down">
+        
+        <h1>Next payment due in</h1>
+        <CountDown/>
+    </div>
+    
+    
+</div>
+</div>
+</template>
+
 <script>
 
 import CountDown from "../../components/Countdown.vue"
-
+import NavBar from '../../components/NavBar.vue';
 
 // i can take the router.id then i can use that for index number in mockdata
 export default{
     props: ["members"],
-    components: { CountDown },
+    components: { CountDown ,NavBar},
     data(){
        
         return{
@@ -26,32 +51,6 @@ export default{
 }
 
 </script>
-
-
-<template>
-
-
-<div class="container">
-    <div class="userprofile">
-        <img :src="img">
-        <h4>PROFILE</h4>
-        <h1>{{name}} </h1>
-    </div>
-    <div class="stats">
-        <h1>last payment: ${{lastPay}}</h1>
-        <h1>amount owed: ${{owed}}</h1>
-    </div>
-    <div class="count-down">
-        
-        <h1>Next payment due in</h1>
-        <CountDown/>
-    </div>
-    
-    
-</div>
-
-</template>
-
 <style scoped>
 
 .container{

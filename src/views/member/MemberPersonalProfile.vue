@@ -1,6 +1,8 @@
 
 <template>
 
+    <div>
+        <NavBar/>
 
     <div class="container">
         <div class="userprofile">
@@ -15,11 +17,18 @@
         <div class="count-down">
             <h1>next payment due in xx days</h1>
         </div>
-        
-        
     </div>
-    
+    </div>
     </template>
+    <script>
+    import NavBar from '../../components/NavBar.vue';
+    export default {
+        components:{
+             NavBar
+         }
+    }
+        
+    </script>
     
     <style scoped>
     .container{

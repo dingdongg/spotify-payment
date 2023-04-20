@@ -1,39 +1,9 @@
-<script>
-
-import api from "../api/api";
-import NavBar from "../components/NavBar.vue";
-export default {
-
-  data() {
-    return {
-      username: "",
-      password: "",
-      showPassword: false,
-    };
-  },
-
-  methods: {
-    submitForm() {
-      api.login({ 
-        username: this.username, 
-        password: this.password 
-      });
-    },
-
-    togglePassword() {
-      this.showPassword = !this.showPassword;
-    }
-  },
-}
-
-</script>
-
 <template>
 
   <NavBar />
   <div class="container">
     <div class="background-wrapper">
-      <img src="../components/icons/spotify-logo.png"/>
+      <img src="../../components/icons/spotify-logo.png"/>
       <p class="login-form-text">Use your Spotify Tracker Account</p>
       <div class="form-container">
         <form @submit.prevent="submitForm">
@@ -53,6 +23,42 @@ export default {
 
 </template>
 
+<script>
+import api from "../../api/api";
+import NavBar from "../../components/NavBar.vue";
+
+export default {
+  inject:['isLoggedIn'],
+  data() {
+    return {
+      username: "",
+      password: "",
+      showPassword: false,
+    };
+  },
+
+  methods: {
+    submitForm() {
+      api.login({ 
+        username: this.username, 
+        password: this.password 
+      });
+      
+      console.log("YOU ARE NOW LOGGED IN!")
+      //will get from endpoint prop
+     
+      
+      this.$router.push("/home")
+
+    },
+
+    togglePassword() {
+      this.showPassword = !this.showPassword;
+    }
+  },
+}
+
+</script>
 <style scoped>
 
 img{
