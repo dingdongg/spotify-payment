@@ -1,8 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import LoginView from '../views/login/LoginView.vue'
+import LoginView from '../views/login/LoginView.vue';
 import AdminPaymentHistoryView from '../views/admin/AdminPaymentHistoryView.vue';
-import MemberHomeView from '../views/member/MemberHome.vue'
-import AdminHomeView from '../views/admin/AdminHomeView.vue'
+import MemberHomeView from '../views/member/MemberHome.vue';
+import AdminHomeView from '../views/admin/AdminHomeView.vue';
+import MemberPersonalProfile from '../views/member/MemberPersonalProfile.vue';
+import MemberHistory from '../views/member/MemberHistory.vue';
+import MemberPayment from '../views/member/MemberPayment.vue';
+import PersonalProfile from '../views/admin/PersonalProfile.vue';
 
 const isAdmin= true;
 const mockData = [];
@@ -51,34 +55,32 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path:"/",
+      path: "/",
       name: "login",
-      component: LoginView
+      component: LoginView,
     },
     {
-      path:"/home",
+      path: "/home",
       name: "home",
       props: {
         name: mockName,
         members: mockData,
-              },
-      get component(){
-        return isAdmin ? AdminHomeView : MemberHomeView
-      }
+      },
+      get component() {
+        return isAdmin ? AdminHomeView : MemberHomeView;
+      },
     },
     {
       path: '/my-profile',
-      component: ()=> import ('../views/member/MemberPersonalProfile.vue')
-      
+      component: MemberPersonalProfile,
     },
     {
-       path: '/my-history',
-       component: ()=> import ('../views/member/MemberHistory.vue')
-      
+      path: '/my-history',
+      component: MemberHistory,
     },
     {
-      path:'/my-payments',
-      component: ()=> import ('../views/member/MemberPayment.vue')
+      path: '/my-payments',
+      component: MemberPayment,
     },
     {
       //admin page
@@ -86,17 +88,15 @@ const router = createRouter({
       props: {
         members: mockData,
       },
-      component: ()=> import ('../views/admin/PersonalProfile.vue'),
-                  
+      component: PersonalProfile,
     },
     {
-            path: '/admin-payment-history',
-            component: AdminPaymentHistoryView,
-            props: {
-              payments: mockPayments,
-            },
-    }
-    
-  ]
-})
+      path: '/admin-payment-history',
+      component: AdminPaymentHistoryView,
+      props: {
+        payments: mockPayments,
+      },
+    },
+  ],
+});
 export default router
